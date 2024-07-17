@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        /* Add some basic styling to make the page look attractive */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("static/images/titanic-6972725_1280.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-image: linear-gradient(to top , #3399ff 10%,purple 30%,pink 90%);
+        }
+        .gif-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .gif {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .home-button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .home-button:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="gif-container">
+            {%if data == value1%}
+            <!-- Add your GIF here -->
+             <h1 style="text-align: center;font-size: xx-large; color: white; text-shadow: -1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black, 1px 1px 0 black;"">Survived</h1>
+             <img class="gif" src="{{ url_for('static', filename='images/_af9943c1-7a6b-44df-aa96-6e7254c2cff9.jpg') }}" alt="My Image">
+            {%elif data == value0%}
+            <h1 style="text-align: center;font-size: xx-large; color: white; text-shadow: -1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black, 1px 1px 0 black;"">Died</h1>
+            <img class="gif" src="{{ url_for('static', filename='images/_b0f0b18e-b8d2-4e3c-8f11-1c77abb42d6b.jpg') }}" alt="My Image">
+            {%else%}
+            <h1>Hai</h1>
+            {%endif%}
+        </div>
+        <center>
+        <a href="/" style="text-decoration: none;"><button class="home-button">Home</button></a>
+        </center>
+    </div>
+</body>
+</html>
