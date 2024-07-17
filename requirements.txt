@@ -108,7 +108,6 @@ pyping==0.0.6
 python-dateutil==2.8.2
 pytz==2023.3.post1
 pywaffle==1.1.0
-pywin32==306
 pyzmq==25.1.2
 randomuser==1.6
 referencing==0.32.0
